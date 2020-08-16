@@ -1,0 +1,166 @@
+<% include ../partials/_header %>
+
+
+<div class="col-md-4 mx-auto mt-5">
+  <div class="card text-center mt-5">
+    <div class="card-header">
+      <h3>Postear artículo</h3>
+    </div>
+    <div class="card-body">
+      <form action="/produno/new-produno" method="POST">
+      
+       <div class="form-group">
+          <input type="text" name="title" class="form-control" placeholder="title" autofocus/>
+        </div>
+        <div class="form-group">
+            <input type="text" name="image" class="form-control" placeholder="imagen 1" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="imagedos" class="form-control" placeholder="imagen 2" autofocus/>
+          </div>
+         
+          <div class="form-group">
+            <input type="text" name="description" class="form-control" placeholder="descripcion" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="fecha" class="form-control" placeholder="precio" autofocus/>
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="fuente" class="form-control" placeholder="precio" autofocus/>
+          </div>
+                 
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<% produno.forEach(function (produn) { %>
+  <div class="element-item col-12 col-md-6 col-lg-4 mx-auto my-3 cupcake">
+    <div class="card single-item">
+      <div class="img-container">
+          <img src="<%= produn.image %>" class="card-img-top store-img" alt="">
+        
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text text-capitalize d-flex justify-content-between">
+          <h5 class="store-item-name">cupcake item</h5>
+          <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+          <a class="btn btn-danger" href="/produno/delete/<%= produn.id %>">
+            Eliminar
+        </a>
+        <a class="btn btn-primary" href="/produno/edit/<%= produn.id %>">
+            Editar
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of single items-->
+  <% }) %>
+
+                
+
+
+
+
+
+
+
+        <div class="col-12">
+                <div class="row">
+                      <!-- pagination -->
+                      <% if(pages > 0) { %> <!-- show pagination if there is pages -->
+                        <nav  class="mx-auto" style="margin-bottom: 50px">
+                          <ul class="pagination">
+                            <!-- FIRST ITEM -->
+                            <% if(current == 1) { %>
+                              <li class="page-item disabled">
+                                <a class="page-link" href="#">First</a>
+                              </li>
+                            <% } else { %>
+                              <li class="page-item">
+                                <a class="page-link" href="/produnoback/1">First</a>
+                              </li>
+                            <% } %>
+                            <!-- ITEMS  -->
+                            <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                            <% if(i !== 1) { %>
+                              <li class="page-item disabled">
+                                <a class="page-link" href="#">...</a>
+                              </li>
+                            <% } %>
+                            <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                              <% if(i == current) { %>
+                                <li class="page-item active">
+                                  <a class="page-link" href="<%= i %>">
+                                    <%= i %>
+                                  </a>
+                                </li>
+                              <% } else { %>
+                                <li class="page-item">
+                                  <a class="page-link" href="/produnoback/<%= i %>">
+                                    <%= i %>
+                                  </a>
+                                </li>
+                              <% } %>
+                              <% if (i == Number(current) + 4 && i < pages) { %>
+                                 <li class="page-item disabled">
+                                   <a class="page-link" href="#">...</a>
+                                 </li>
+                              <% } %>
+                            <% } %>
+                            <!-- LAST ITEM -->
+                            <% if(current == pages) { %>
+                              <li class="page-item disabled">
+                                <a class="page-link" href="#">
+                                  Last
+                                </a>
+                              </li>
+                            <% } else { %>
+                              <li class="page-item">
+                                <a class="page-link" href="/produnoback/<%= pages %>">
+                                  Last
+                                </a>
+                              </li>
+                            <% } %>
+                          </ul>
+                        </nav>
+                      <% } %>
+                    </div>
+                  </div>
+          
+
+                </main>
+                <!-- Main Content -->
+              </div>
+              
+
+ 
+
+
+              <footer class="footer">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-8 mx-auto text-center">
+                              <p class="mb-0 p-3 text-capitalize">all copyright reserved @2020.</p>
+                          </div>
+                      </div>
+                  </div>
+              </footer>
+
+
+        <% include ../partials/_footer %>
+        

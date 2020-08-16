@@ -1,0 +1,274 @@
+body{
+	font-family: 'Lato', sans-serif; /*secundaria*/
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Rasa', serif; /*primaria*/
+	font-weight: 600;
+}
+
+/*COLOR TEXTOS PRIMARIOS*/
+.text-primary {
+	/*color: #6082B0 !important;*/
+	color: #313654 !important;
+}
+
+/*ICONOS DE WHATS,MAIL,DIRE y de los que aparecen en xq elegirnos*/
+.icon {
+	/*color: #313654;*/
+	color: white;
+}
+
+.icon-lg{
+	color: #F6B78D;
+}
+
+/*Texto al lado de los iconos de wp, mail, dire*/
+.navbar-contact-list li a, .navbar-contact-list li a:focus, .navbar-contact-list li a:active {
+	/*color: #313654;*/
+	color: white;
+}
+
+.navbar-contact-list li a:hover {
+	/*color: rgba(49, 54, 84, 0.5);*/
+	color: white;
+}
+
+/*iconos redes sociales*/
+.social-links li:hover a {
+	color: #ffffff;
+}
+
+.social-links li a {
+	/*color: #313654;*/
+	color: white;
+}
+
+/*NAVBAR */
+
+/*fondo del navbar cuando haces scroll para abajo*/
+.rd-navbar-static.rd-navbar--is-stuck, .rd-navbar-static.rd-navbar--is-clone {
+	/*background: #6082B0;*/
+	background: #313654;
+}
+
+/*letra del menu que NO esta seleccionada, SOLO EN PANTALLA GRANDE*/
+.rd-navbar-static .rd-nav-link{
+	font-family: 'Rasa', serif;
+	font-weight: 700;
+	font-size: 16px;
+	/*color: #F6B78D;*/
+	color: white;
+}
+
+/*letra del menu activo*/
+.rd-navbar-static .rd-nav-item.active .rd-nav-link{
+	color: #ffffff;
+}
+
+/*subrayado del menu activo*/
+.rd-navbar-static .rd-nav-item.active .rd-nav-link:before {
+	/*background-color: #313654;*/
+	background-color: #E75144;
+}
+
+/*alto navbar*/
+.rd-navbar-classic.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main, .rd-navbar-classic.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main{
+	padding: 5px 0;
+}
+
+/*barra donde aparece los iconos de wp, dire.. en pantalla grande*/
+.bg-gray-dark{
+	background-color: #313654;
+}
+
+/*navbar pantallas chicas (menu hamburguesa)*/
+.rd-navbar-fixed .rd-navbar-panel{
+	background-color: #313654;
+	color: white;
+}
+
+/*lineas menu hamburguesa*/
+.rd-navbar-toggle span:after, .rd-navbar-toggle span:before, .rd-navbar-toggle span{
+	background-color: white;
+}
+
+/*menu de tres puntos*/
+.rd-navbar-collapse-toggle span, .rd-navbar-collapse-toggle span:before, .rd-navbar-collapse-toggle span:after{
+	background: white;
+}
+
+/*fondo seccion seleccionada en menu hamburg en pantalla chica*/
+.rd-navbar-fixed .rd-nav-item:hover .rd-nav-link, .rd-navbar-fixed .rd-nav-item.focus .rd-nav-link, .rd-navbar-fixed .rd-nav-item.active .rd-nav-link, .rd-navbar-fixed .rd-nav-item.opened .rd-nav-link{
+	background-color: #313654;
+}
+
+@media (max-width:992px){
+	.navbar-contact-list li a{
+		color: #313654;
+	}
+	.icon{
+		color: #313654;
+	}
+	.social-links li a{
+		color: #313654;	
+	}
+	#footer .social-links li a{
+		color: white;
+	}
+}
+	
+
+/*HERO - IMAGEN PPAL*/
+
+/*linea antes del subtitulo Estudio jurídico integral*/
+@media (min-width: 1200px) {
+	.main-decorated-box .decorated-subtitle:before {
+		/*background-color: #ffffff;*/
+		background-color: #E75144;
+	}
+}
+
+/*SOBRE NOSOTROS*/
+
+/*Color de linea debajo del texto ppal*/
+.devider-bottom:after {
+	/*background-color: #6082B0;*/
+	background-color: #E75144;
+}
+
+/*XQ ELEGIRNOS*/
+.box-default-description{
+	font-family: 'Lato', sans-serif;	
+}
+
+/*color linea de la izq del titulo*/
+.devider-left::after{
+	/*background-color: #6082B0;*/
+	background-color: #E75144;
+}
+
+/*SERVICIOS*/
+.review-carousel .item-description .item-subsection-title{
+	font-family: 'Rasa', serif;
+	font-weight: 400;	
+	font-size: 26px;
+}
+
+.review-carousel .item-description .item-subsection{
+	margin-top: 0;
+}
+
+.review-carousel .item-description p{
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.list-servicios li{
+	font-size: 16px;
+}
+
+/*Imagen de los servicios*/
+.review-carousel .item-preview{
+	align-self: flex-start;
+}
+
+/*bolitas y nros del slider de servicios*/
+@media (min-width: 1200px) {
+	/* color del numero */
+	.review-carousel .owl-dots .active:before {
+		/*color: #505cfd;*/
+		color: #E75144;
+	}
+	/*color del baston, la bolita actual*/
+	.review-carousel .owl-dots .active:after {
+		/*background-color: #505cfd;*/
+		background-color: #E75144;
+	}
+}
+
+/*bolita activa y hover*/
+.owl-carousel .owl-dot.active span, .owl-carousel .owl-dot:hover span {
+	/*background: #505cfd;
+	border-color: #505cfd;*/
+	background: #E75144;
+	background-color: #E75144;
+	border-color: #E75144; /*quitar border color si se deja el celesyito*/
+}
+
+
+/*Footer*/
+
+/*backround y color de letra footer*/
+.footer-classic {
+	/*background: #6082B0;*/
+	background-color: #313654;
+	color: #313654;
+}
+
+#footer{
+	color: white;
+}
+
+.footer-classic .brand img{
+	width: 70%;
+}
+
+.footer-classic .text-brand p{
+	margin-top: 0;
+}
+
+.footer-direccion iframe{
+	width: 100%;
+	height: 150px;
+}
+
+#footer hr{
+	border: 1px solid #E75144;
+}
+
+/*color h3*/
+#footer h3{
+	color: white;
+}
+
+/*color h4*/
+#footer h4{
+	color: white;
+}
+
+.row-footer-brand .text-brand, .row-footer-brand .text-brand a {
+	color: white;
+}
+
+.row-footer-brand .text-brand .name-abo{
+	font-size: 24px;
+}
+
+/*BOTON DE IR ARRIBA*/
+.ui-to-top{
+	background: #E75144;
+}
+
+@media (max-width: 576px){
+	.row-footer-brand{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.footer-direccion .margin-mapa-lg{
+		margin-top: 35px;
+	}
+}
+
+@media (min-width: 2000px){
+	.footer-direccion .margin-mapa-lg{
+		margin-top: 0;
+	}	
+}
+
+
+
+
